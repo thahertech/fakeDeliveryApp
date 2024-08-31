@@ -12,7 +12,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We need your location to show it on the map.",
+        "NSLocationAlwaysUsageDescription": "We need your location to show it on the map."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -22,6 +25,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a96cc3bc-50c5-40f9-8279-61547fb2b03a"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a96cc3bc-50c5-40f9-8279-61547fb2b03a"
     }
   }
 }
