@@ -4,13 +4,11 @@
 
 This React Native application integrates a map view with Google Places Autocomplete to allow users to set destinations and view routes. It displays the current location and destination on the map and provides real-time updates on the route. The app also includes a night mode style for the map and interactive elements to enhance the user experience.
 
-##Screenshots
+## Screenshots
 
-<img src="https://github.com/user-attachments/assets/2dd4d4aa-d828-4e54-8ec7-f5d1d4ccc94a" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 57 52" style="max-width: 10 %;"/>
-
-<img src="https://github.com/user-attachments/assets/bbb6a19b-ca44-47fe-bd6d-92423e511486" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 55 38" style="max-width: 10%;"/>
-
-<img src="https://github.com/user-attachments/assets/c7b8afdf-57db-4a9e-b81f-0c74b3278c45" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 59 41" style="max-width: 30%;"/>
+  <img src="https://github.com/user-attachments/assets/bbb6a19b-ca44-47fe-bd6d-92423e511486" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 55 38" width="30%" />
+  <img src="https://github.com/user-attachments/assets/2dd4d4aa-d828-4e54-8ec7-f5d1d4ccc94a" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 57 52" width="30%" />
+  <img src="https://github.com/user-attachments/assets/c7b8afdf-57db-4a9e-b81f-0c74b3278c45" alt="Simulator Screenshot - iPhone 15 - 2024-09-15 at 18 59 41" width="30%" />
 
 ## Features
 
