@@ -1,8 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { API_KEY } from 'react-native-dotenv';
-
-const apiKey = API_KEY;
-
 import {
   StyleSheet,
   View,
@@ -114,6 +110,7 @@ export default function App() {
   const { height: windowHeight } = useWindowDimensions();
   
   const mapRef = useRef(null);
+  const API_KEY = 'get your own :)';
 
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
@@ -205,6 +202,15 @@ export default function App() {
         setRouteCoords(routeCoords);
         setEstimatedTime(routeData.routes[0].legs[0].duration.text);
 
+        // Zoom to route
+        if (mapRef.current) {
+          mapRef.current.animateToRegion({
+            latitude: (currentLocation.latitude),
+            longitude: (currentLocation.longitude),
+            latitudeDelta: 0.05,
+            longitudeDelta: 0.05,
+          }, 1000);
+        }
       } else {
         Alert.alert('Error', 'No route found');
       }
@@ -258,8 +264,8 @@ export default function App() {
         customMapStyle={nightModeStyle} // Apply night mode style
 
         initialRegion={{
-          latitude: 65.01236, // Default to Oulu
-          longitude: 25.46816, // Default to Oulu
+          latitude: 65.01236, // Default to Oulu's latitude
+          longitude: 25.46816, // Default to Oulu's longitude
           latitudeDelta: 0.009,
           longitudeDelta: 0.009,
           
@@ -280,7 +286,7 @@ export default function App() {
             tracksViewChanges={true}
           >
             <Image
-              source={require('./pngtree-car.png')} //My Location Car image
+              source={require('./pngtree-car.png')}
               style={styles.customMarker}
             />
           </Marker.Animated>
@@ -315,7 +321,7 @@ export default function App() {
                 onChangeText={setName}
               />
               <GooglePlacesAutocomplete
-                placeholder="Osoite"
+                placeholder="Enter Address"
                 minLength={2}
                 fetchDetails={true}
                 onPress={handleSetDestination}
@@ -367,11 +373,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#333',
     padding: 20,
     borderTopWidth: 3,
-    maxHeight: 250,
+    maxHeight: 300,
     borderRadius:15,
     borderTopColor: '#555',
   },
+  inputContainer: {
+    height: 500,
 
+  },
   input: {
     height: 40,
     borderColor: '#555',
